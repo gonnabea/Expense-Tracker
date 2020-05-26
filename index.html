@@ -7,7 +7,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <section class="background">
+        <h1 class="title">가계부</h1>
+        <section class="status">
+            <h3 class="status_title">
+                현재 수익
+            </h3>
+            <h1 class="status_balance" id="balance"></h1>
+            <div class="status-detail">
+                <div class="income">
+                    <div class="income_title">수입</div>
+                    <div class="income_num"></div>
+                </div>
+                <div class="expense">
+                    <div class="expense_title">지출</div>
+                    <div class="expense_num"></div>
+                </div>
+            </div>
+        </section>
+        <section class="history">
+            <h3 class="history_title">상세내역</h3>
+            <div class="histories" id="histories"></div>
+        </section>
+        <section class="add">
+            <h3 class="add_title">추가하기</h3>
+            <form action="" class="add_form" id="addForm">
+                <div class="add_text">
+                    <h5 class="add_text_title">
+                        내역명
+                    </h5>
+                    <input type="text" placeholder="내역명을 입력하세요..." class="add_text_input" required=true>
+                </div>
+                <div class="add_amount">
+                    <h5 class="add_amount_title">
+                        비용
+                    </h5>
+                    <input type="number" placeholder="비용을 입력하세요..." class="add_amount_input" required=true>
+                </div>
+                <input type="submit" class="add_submit">
+            </form>
+        </section>
+    </section>
 </body>
 <script src="script.js"></script>
 </html>
