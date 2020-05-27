@@ -4,10 +4,11 @@ recordName = document.getElementById("recordName"),
 recordValue = document.getElementById("recordValue"),
 income = document.getElementById("income"),
 minus = document.getElementById("minus"),
-balance = document.getElementById("balance")
+balance = document.getElementById("balance"),
+recordValues = document.getElementsByClassName("record_value"),
+recordNames = document.getElementsByClassName("record_name");
 
 function totalIncome(){
-    const recordValues = document.getElementsByClassName("record_value");
     let incomeValue = 0;
     let minusValue = 0;
     let total = 0;
@@ -23,6 +24,7 @@ function totalIncome(){
     }
     total = incomeValue + minusValue;
     balance.innerHTML = `₩${total}`;
+    save();
 }
 
 function handleSubmit(e){
@@ -52,6 +54,19 @@ function handleSubmit(e){
     recordName.value = "";
     recordValue.value = null; //내역 추가
     totalIncome()
+}
+
+function save(){
+    let recordObj = {};
+    for(let i=0 ; i< recordValues.length ; i++){
+        recordObj[recordNames[i].innerHTML] = parseInt(recordValues[i].innerHTML);
+    }
+    localStorage.setItem("Record", JSON.stringify(recordObj));
+}
+
+function load(){
+    console.log(JSON.parse(localStorage.getItem("Record")))
+    
 }
 
 function init(){
