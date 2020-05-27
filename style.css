@@ -58,6 +58,14 @@ body{
     
 }
 
+.record{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    border-right: solid 4px #2ECC71;
+    padding: 0 5px 0 5px;
+}
+
 .add_form{
     width: 300px;
 }
