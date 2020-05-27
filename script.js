@@ -73,15 +73,20 @@ function load(){
     for(let i=0 ; i < Object.keys(recordObj).length ; i++){ // 오브젝트는 그 자체로 length가 없음 그래서 배열로 변환하여 length측정.
         savedValues.push(recordObj[Object.keys(recordObj)[i]]) // 저장되어있는 오브젝트 모든 값을 불러오기
         const div = document.createElement("div"),
+    span = document.createElement("span");
     span1 = document.createElement("span"),
-    span2 = document.createElement("span");
+    span2 = document.createElement("span"),
     div.id = "record";
     div.className = "record";
+    span.id = "deleteBtn";
+    span.className = "delete-btn";
+    span.innerHTML = "✖";
     span1.id = "recordName";
     span1.className = "record_name";
     span1.innerHTML = savedNames[i];
     span2.id = "recordValue";
     span2.className = "record_value";
+    div.appendChild(span);
     div.appendChild(span1);
     if(savedValues[i] < 0){
         div.style.borderRight = "solid 4px #C0392B";
@@ -98,6 +103,10 @@ function load(){
     totalIncome()
     } 
     
+}
+
+function remove(){
+
 }
 
 function init(){

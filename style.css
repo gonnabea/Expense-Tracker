@@ -90,3 +90,31 @@ input{
     height: 30px;
     border: none;
 }
+
+.delete-btn{
+    position: absolute;
+    margin-left: -30px;
+    background-color: #E74C3C;
+    color: white;
+    padding: 5px;
+    border: solid 1px white;
+    cursor: pointer;
+}
+
+@keyframes showBtn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes hideBtn{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
