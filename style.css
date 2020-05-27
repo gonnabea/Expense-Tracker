@@ -64,6 +64,8 @@ body{
     height: 30px;
     border-right: solid 4px #2ECC71;
     padding: 0 5px 0 5px;
+    background-color: white;
+    box-shadow: 0 0 5px 5px blanchedalmond;
 }
 
 .add_form{
