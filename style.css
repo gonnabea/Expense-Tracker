@@ -92,14 +92,23 @@ input{
 }
 
 .delete-btn{
-    position: absolute;
+    position: block;
     margin-left: -30px;
     background-color: #E74C3C;
     color: white;
     padding: 5px;
     border: solid 1px white;
     cursor: pointer;
+    opacity: 0;
 }
+
+.record_name{
+    position: relative;
+    right: 50px;
+    overflow: hidden;
+}
+
+
 
 @keyframes showBtn{
     from{
