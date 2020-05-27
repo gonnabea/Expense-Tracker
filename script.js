@@ -3,23 +3,26 @@ histories = document.getElementById("histories"),
 recordName = document.getElementById("recordName"),
 recordValue = document.getElementById("recordValue"),
 income = document.getElementById("income"),
-minus = document.getElementById("minus");
+minus = document.getElementById("minus"),
+balance = document.getElementById("balance")
 
 function totalIncome(){
     const recordValues = document.getElementsByClassName("record_value");
     let incomeValue = 0;
     let minusValue = 0;
+    let total = 0;
     for(let i=0 ; i< recordValues.length ; i++){
         if(parseInt(recordValues[i].innerHTML) >= 0){
         incomeValue += parseInt(recordValues[i].innerHTML) ;
-        income.innerHTML = incomeValue;
+        income.innerHTML = `₩${incomeValue}`;
         }
         else{
         minusValue += parseInt(recordValues[i].innerHTML);
-        minus.innerHTML = minusValue;
+        minus.innerHTML = `₩${-minusValue}`;
         }
     }
-    
+    total = incomeValue + minusValue;
+    balance.innerHTML = `₩${total}`;
 }
 
 function handleSubmit(e){
