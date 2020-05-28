@@ -14,6 +14,7 @@ function totalIncome(){
     let incomeValue = 0;
     let minusValue = 0;
     let total = 0;
+    console.log(recordValues)
     for(let i=0 ; i< recordValues.length ; i++){
         if(parseInt(recordValues[i].innerHTML) >= 0){
         incomeValue += parseInt(recordValues[i].innerHTML) ;
@@ -125,8 +126,10 @@ function load(){
 }
 
 
-function remove(){
-    
+function remove(e){
+    e.target.parentNode.remove();
+    recordObj = {};
+    totalIncome();
 }
 
 function init(){
