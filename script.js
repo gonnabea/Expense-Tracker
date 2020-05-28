@@ -25,6 +25,10 @@ function totalIncome(){
         minus.innerHTML = `₩${-minusValue}`;
         }
     }
+    if(recordValues.length === 0 || 1){
+        income.innerHTML = `₩${incomeValue}`;
+        minus.innerHTML = `₩${-minusValue}`;
+    } // 내역에 음수와 양수 각각 하나씩 남았을 때 갱신되지 않는 버그 수정
     total = incomeValue + minusValue;
     balance.innerHTML = `₩${total}`;
     save();
